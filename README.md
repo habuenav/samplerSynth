@@ -1,7 +1,5 @@
 # ESP32 samplerSynth
-Librería para crear proyectos de audio utilizando la placa ESP32. Utiliza muestras de audio para generar sonidos de instrumentos musicales y proporciona funciones para controlar la reproducción y duracion de las notas asi como para ajustar el volumen entre otras caracteristicas.
-Fue desarrollada con la idea de crear instrumentos musicales que puedan reproducir su propio sonido sin necesidad de hardware dedicado a dicha funcion, como los modulos basados en el VS1053b, el SAM2695 o Wav Trigger o SmartWav 2 los cuales pueden llegar a ser costosos
-y segun el caso ocupar mucho espacio. la calidad del sonido que ofrece esta libreria puede ser suficiente para la mayoria de proyectos DIY.
+Librería para crear proyectos de audio con la placa ESP32. Utiliza muestras de audio para generar sonidos de instrumentos musicales y ofrece funciones para controlar la reproducción, duración de las notas y ajuste de volumen, entre otras características. Su principal objetivo es permitir a la comunidad maker interesada en la creación de novedosos instrumentos musicales enfocarse en la forma y funcionalidad de sus creaciones, logrando reproducir sonidos sin necesidad de hardware dedicado, como los módulos VS1053b, SAM2695, Wav Trigger o SmartWav 2, que pueden ser costosos y ocupar mucho espacio. Además, se enfoca en la facilidad de uso, siendo una opción accesible para programadores principiantes, a diferencia de otros proyectos avanzados como los de Marcel Licence o Phil Schatzmann. Esta librería facilita el desarrollo rápido y sencillo con una calidad de sonido aceptable para la mayoría de proyectos DIY.
 
 ## Características
 * <b>Reproducción de Samples:</b> Soporte para la carga y reproducción de archivos WAV.
@@ -32,22 +30,18 @@ y segun el caso ocupar mucho espacio. la calidad del sonido que ofrece esta libr
 * <b>resumeSynth():</b> Reanuda la tarea del sintetizador.
 
 ## Samples de Instrumentos Incluidos
-Los samples tiene una duracion de entre 0.4 y 1.1 Segundos y su tamañao es de 30 a 65 Kb, tiene un sample rate de 32Khz y 16bits, gracias a su pequeño tamaño
-y los aproximadamente 4Mb de memoria flash del Esp32 se pueden agregar muchos mas samples (Instrumentos). Lista de instrumentos con numero y nombre:
-0 Acordeon, 1 Bajo, 2 Banjo, 3 Cello, 4 Clarinete, 5 Flauta, 6 Guitarra, 7 Marimba, 8 Piano, 9 Saxofon, 10 Trompeta, 11 Ukulele, 12 Violin
+Los samples tienen una duración de entre 0.4 y 1.1 segundos y un tamaño de 30 a 65 KB, con una tasa de muestreo de 32 kHz y 16 bits. Gracias a su pequeño tamaño y a los aproximadamente 4 MB de memoria flash del ESP32, se pueden agregar muchos más samples (instrumentos). Lista de instrumentos con número y nombre: 0 Acordeón, 1 Bajo, 2 Banjo, 3 Cello, 4 Clarinete, 5 Flauta, 6 Guitarra, 7 Marimba, 8 Piano, 9 Saxofón, 10 Trompeta, 11 Ukulele, 12 Violín.
 
 ## Conexion
 
 
 
 ## Uso Basico
-Primero se debe cargar el sketch firstRun que esta en la carpeta examples y luego ir a herramientas y ejecutar la opcion Esp32 Sketch Data Upload
-Esto cargara los samples en la memoria flash del Esp32, tambien es recomendable seleccionar la opcion NO OTA large APP en Partition Scheme.
-Inicializar el sintetizador con initSynth(bck, ws, data), donde bck, ws y data son los pines de la placa ESP32 utilizados para la comunicación I2S.
-Cargar un sample de instrumento utilizando setInstrumento(num), donde num es el índice del instrumento deseado.
-Activar notas musicales utilizando notaOn(nota, velocity, duracion). el parametro velocity y duracion son opcionales, si duracion es 0, la nota es tiene un sostenido indefinido.
-Controlar la reproducción de las notas utilizando las funciones de manejo de notas.
-Aplicar efectos y filtros  de sonido utilizando las funciones correspondientes.
+Primero, carga el sketch "firstRun" que está en la carpeta "examples" y luego ve a "Herramientas" y selecciona "ESP32 Sketch Data Upload". Esto cargará los samples en la memoria flash del ESP32. También es recomendable seleccionar la opción "NO OTA (Large APP)" en "Partition Scheme".<br/>
+Inicializa el sintetizador con initSynth(bck, ws, data), donde bck, ws y data son los pines de la placa ESP32 utilizados para la comunicación I2S.<br/>
+Carga un sample de instrumento utilizando setInstrumento(num), donde num es el índice del instrumento deseado.<br/>
+Activa notas musicales utilizando notaOn(nota, velocity, duracion). Los parámetros velocity y duracion son opcionales; si duracion es 0, la nota tiene un sostenido indefinido.<br/>
+Controla la reproducción de las notas utilizando las funciones de manejo de notas. Aplica efectos y filtros de sonido utilizando las funciones correspondientes.
 
 # Agradecimientos
 Quiero expresar mi sincero agradecimiento a Turman por su contribución inicial en la función de reproducción de sonido que sirvió como punto de partida para el desarrollo de esta librería. Su código proporcionó una base sobre la cual construir y explorar nuevas funcionalidades.
