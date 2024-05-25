@@ -33,8 +33,7 @@ Librería para crear proyectos de audio con la placa ESP32. Utiliza muestras de 
 Los samples tienen una duración de entre 0.4 y 1.1 segundos y un tamaño de 30 a 65 KB, con una tasa de muestreo de 32 kHz y 16 bits. Gracias a su pequeño tamaño y a los aproximadamente 4 MB de memoria flash del ESP32, se pueden agregar muchos más samples (instrumentos). Lista de instrumentos con número y nombre: 0 Acordeón, 1 Bajo, 2 Banjo, 3 Cello, 4 Clarinete, 5 Flauta, 6 Guitarra, 7 Marimba, 8 Piano, 9 Saxofón, 10 Trompeta, 11 Ukulele, 12 Violín.
 
 ## Conexion
-
-
+<img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/latam/mx/accept-payments-online/icons/img_btn-donate2x.png" height="80"></a>
 
 ## Uso Basico
 Primero, carga el sketch "firstRun" que está en la carpeta "examples" y luego ve a "Herramientas" y selecciona "ESP32 Sketch Data Upload". Esto cargará los samples en la memoria flash del ESP32. También es recomendable seleccionar la opción "NO OTA (Large APP)" en "Partition Scheme".<br/>
