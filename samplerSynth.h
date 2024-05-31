@@ -138,8 +138,8 @@ void allNotaOff()
 	notasActivas = 0;
 }
 void setVolumen(byte vol)
-{	vol = constrain(vol, 0, 20);
-	synthVolumen = vol / 20.0 f;
+{	vol = constrain(vol, 0, 100);
+	synthVolumen = vol / 100.0 f;
 }
 static inline void IRAM_ATTR synth_process()
 {	float vel;
