@@ -22,8 +22,8 @@ void pulsacion(){
             case '5':  setSustainNota(0);  break;   //sustained indefinitely therefore the note sounds until the noteOff(note) or allNotaOff() function is called
             //sostiene el sonido de la nota X cantidad de tiempo en milisegundos
             case '6':  setSustainNota(700); break;  //holds the sound of the note for X amount of time in milliseconds
-            case '5':  pauseSynth();  break;   
-            case '6':  resumeSynth(); break; 
+            case '7':  pauseSynth();  break;   
+            case '8':  resumeSynth(); break; 
             
             case 'a':  setInstrumento(0);    break;   
             case 's':  setInstrumento(1);   break;   
