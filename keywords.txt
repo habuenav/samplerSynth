@@ -1,0 +1,34 @@
+#######################################
+# Syntax Coloring Map For samplerSynth.h
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+_Notas	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+taskSynth	KEYWORD2
+initSynth	KEYWORD2
+setMaxNotas	KEYWORD2
+setInstrumento	KEYWORD2
+notaOn	KEYWORD2
+notaOff	KEYWORD2
+alterVolNota	KEYWORD2
+alterPitchNota	KEYWORD2
+setVolumen	KEYWORD2
+pauseSynth	KEYWORD2
+resumeSynth	KEYWORD2
+setDelayFade	KEYWORD2
+allnotaOff	KEYWORD2
+Millis		KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
+_SAMPLE_RATE
+_BUFFER
+_FREQBASE
+MESSAGES
