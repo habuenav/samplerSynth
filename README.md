@@ -10,8 +10,8 @@ Librería para crear proyectos de audio con la placa ESP32. Utiliza muestras de 
 * <b>Salida I2S:</b> Utiliza el periférico I2S del ESP32 y un DAC externo (MAX98357). (Podria modificarse para no usar DAC externo pero baja mucho la calidad de sonido)
 * <b>Fácil de Usar:</b> Codigo simple basado en funciones, programacion no orientada a objetos. 
 * <b>Pequeño:</b> Toda la libreria es tan solo un archivo de menos de 15kb y ocupa aproximadamente 15% de espacio de almacenamiento de programa.
- los samples incluidos tambien ocupan poco espacio aproximadamente 700Kb de los casi 4Mb de memoria flash
-* <b>Dependencias:</b> libreria LittleFS. 
+ los samples incluidos tambien ocupan poco espacio aproximadamente 700Kb de los casi 4Mb de memoria flash.
+* <b>Dependencias:</b> libreria LittleFS, libreria MIDI opcional [https://github.com/FortySevenEffects/arduino_midi_library] (usada en el ejemplo rtMidiIn)
   
 
 ## Funciones
