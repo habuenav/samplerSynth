@@ -19,7 +19,7 @@ Librería para crear proyectos de audio con la placa ESP32. Utiliza muestras de 
 * <b>setMaxNotas(maxNotas):</b> Establece el número máximo de notas simultáneas que pueden reproducirse. 8 por defecto maximo recomendado 16
 * <b>setInstrumento(num):</b> Carga un sample de instrumento específico para ser reproducido.
 * <b>setVolumen(vol):</b> Ajusta el volumen global del sintetizador.
-* <b>setSustainNota(DuracionNota):</b> configura el tiempo en milisegundos por defecto que dura una nota al llamar la funcion noteOn (0-65000) si es 0 suena indefinidamente
+* <b>setSustainNota(DuracionNota):</b> configura el tiempo en milisegundos por defecto que dura una nota al llamar la funcion noteOn (0-65535) si es 0 suena indefinidamente.
 * <b>setDelayNota(dFade):</b> Configura el tiempo de desvanecido usado en notaOff para silenciar la nota activa (0-127) 0 inmediato 127 duración maxima.
 * <b>notaOn(nota, velocity, duracion):</b> Activa una nota musical con la frecuencia correspondiente, volumen y duración especificados.
 * <b>notaOff(nota):</b> Desactiva una nota musical gradualmente, disminuyendo su volumen durante un tiempo determinado antes de silenciarla por completo.
