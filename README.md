@@ -56,7 +56,7 @@ void loop() {
 notaOn(nota);
 delay(500);
 nota++;
-if(nota==72){nota=60;}   
+if(nota==72){nota=60; delay(5000);}   
 }
 ```
 
