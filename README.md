@@ -1,3 +1,5 @@
+
+
 ### **[[ENGLISH]](#spanish)**
 
 # ESP32 samplerSynth
@@ -68,6 +70,8 @@ Si te gusto este proyecto o simplemente te sientes generoso, considera invitarme
 <a href="https://www.paypal.com/donate/?business=T8UBSMVJ2QT9Y&no_recurring=0&item_name=%C2%A1Gracias+por+tu+apoyo%21%0ATu+donaci%C3%B3n+es+de+gran+ayuda+y+es+un+incentivo+para+seguir+mejorando.&currency_code=USD"><img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/latam/mx/accept-payments-online/icons/img_btn-donate2x.png" height="80"></a><br/>
 Si has realizado una donación, por favor escribeme un correo y te enviare una version ligeramente optimizada y totalmente comentada, ademas de recibir rápidamente cualquier actualización o mejora adicional que haga a la librería. ¡Tu apoyo es invaluable!
 
+
+
 ### **[[SPANISH]](#english)** 
 
 # ESP32 samplerSynth
@@ -102,6 +106,7 @@ Library to create audio projects with the ESP32 board. It uses audio samples to 
 Samples have a duration between 0.4 and 1.1 seconds and a size of 30 to 65 KB, with a sampling rate of 32 kHz and 16 bits. Thanks to its small size and the ESP32's approximately 4 MB of flash memory, many more samples (instruments) can be added. List of instruments with number and name: 0 Accordion, 1 Bass, 2 Banjo, 3 Cello, 4 Clarinet, 5 Flute, 6 Guitar, 7 Marimba, 8 Piano, 9 Saxophone, 10 Trumpet, 11 Ukulele, 12 Violin.
 ## Connection
 <img src='https://svgshare.com/i/16Rz.svg' title='' />
+
 ## Basic Use
 First, upload the "firstRun" sketch that is in the "examples" folder and then go to "Tools" and select "ESP32 Sketch Data Upload". This will load the samples into the ESP32's flash memory. It is also advisable to select the "NO OTA (Large APP)" option in "Partition Scheme".<br/>
 Initialize the synthesizer with initSynth(bck, ws, data), where bck=16, ws=25 and data=22 are the default pins used on the ESP32 board used for I2S communication.<br/>
