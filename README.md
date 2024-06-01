@@ -1,3 +1,5 @@
+**[[ENGLISH]](#esp32-samplersynth-1)**
+
 # ESP32 samplerSynth
 Librería para crear proyectos de audio con la placa ESP32. Utiliza muestras de audio para generar sonidos de instrumentos musicales y ofrece funciones para controlar la reproducción, duración de las notas y ajuste de volumen, entre otras características. Su principal objetivo es permitir a la comunidad maker interesada en la creación de novedosos instrumentos musicales enfocarse en la forma y funcionalidad de sus creaciones, logrando reproducir sonidos sin necesidad de hardware dedicado, como los módulos VS1053b, SAM2695, Wav Trigger o SmartWav 2, que pueden ser costosos y ocupar mucho espacio. Además, se enfoca en la facilidad de uso, siendo una opción accesible para programadores principiantes, a diferencia de otros proyectos avanzados como los de Marcel Licence o Phil Schatzmann. Esta librería facilita el desarrollo rápido y sencillo con una calidad de sonido aceptable para la mayoría de proyectos DIY.
 
@@ -72,3 +74,19 @@ Este es su Github https://github.com/turmandreams/Piano-ESP32 ahi encontraran ta
 Si te gusto este proyecto o simplemente te sientes generoso, considera invitarme una cerveza. ¡Salud! :beers:<br/>
 <a href="https://www.paypal.com/donate/?business=T8UBSMVJ2QT9Y&no_recurring=0&item_name=%C2%A1Gracias+por+tu+apoyo%21%0ATu+donaci%C3%B3n+es+de+gran+ayuda+y+es+un+incentivo+para+seguir+mejorando.&currency_code=USD"><img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/latam/mx/accept-payments-online/icons/img_btn-donate2x.png" height="80"></a><br/>
 Si has realizado una donación, por favor escribeme un correo y te enviare una version ligeramente optimizada y totalmente comentada, ademas de recibir rápidamente cualquier actualización o mejora adicional que haga a la librería. ¡Tu apoyo es invaluable!
+
+## ESP32 samplerSynth
+Library to create audio projects with the ESP32 board. It uses audio samples to generate musical instrument sounds and offers functions to control playback, note duration, and volume adjustment, among other features. Its main objective is to allow the maker community interested in the creation of new musical instruments to focus on the form and functionality of their creations, being able to reproduce sounds without the need for dedicated hardware, such as the VS1053b, SAM2695, Wav Trigger or SmartWav 2 modules, which They can be expensive and take up a lot of space. In addition, it focuses on ease of use, being an accessible option for beginner programmers, unlike other advanced projects such as those by Marcel Licence or Phil Schatzmann. This library facilitates quick and easy development with acceptable sound quality for most DIY projects.
+
+## Characteristics
+* <b>Sample Playback:</b> Support for loading and playing WAV files.
+* <b>Polyphony:</b> Play multiple notes simultaneously.
+* <b>Volume Control:</b> General volume and Dynamic adjustment of note volume. (Velocity)
+* <b>I2S output:</b> Uses the I2S peripheral of the ESP32 and an external DAC (MAX98357). (It could be modified to not use external DAC but it lowers the sound quality a lot)
+* <b>Easy to Use:</b> Simple function-based code, non-object-oriented programming.
+* <b>Small:</b> The entire library is just one file of less than 15kb and takes up approximately 15% of program storage space.
+ The included samples also take up little space, approximately 700Kb of the almost 4Mb of flash memory.
+* <b>Dependencies:</b> LittleFS library, optional MIDI library [https://github.com/FortySevenEffects/arduino_midi_library] (used in the rtMidiIn example)
+### Developing
+* <b>Effects:</b> Reverb, tremolo and delay. (when noteOff is used and a significant delay time is set)
+* <b>Filters:</b> Low pass and FIR to try to improve the sound quality a little.
