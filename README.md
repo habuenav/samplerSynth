@@ -1,6 +1,6 @@
+<br><br>
 
-
-### **[[ENGLISH]](#spanish)**
+#### **[[ENGLISH]](#spanish)**
 
 # ESP32 samplerSynth
 Librería para crear proyectos de audio con la placa ESP32. Utiliza muestras de audio para generar sonidos de instrumentos musicales y ofrece funciones para controlar la reproducción, duración de las notas y ajuste de volumen, entre otras características. Su principal objetivo es permitir a la comunidad maker interesada en la creación de novedosos instrumentos musicales enfocarse en la forma y funcionalidad de sus creaciones, logrando reproducir sonidos sin necesidad de hardware dedicado, como los módulos VS1053b, SAM2695, Wav Trigger o SmartWav 2, que pueden ser costosos y ocupar mucho espacio. Además, se enfoca en la facilidad de uso, siendo una opción accesible para programadores principiantes, a diferencia de otros proyectos avanzados como los de Marcel Licence o Phil Schatzmann. Esta librería facilita el desarrollo rápido y sencillo con una calidad de sonido aceptable para la mayoría de proyectos DIY.
@@ -35,10 +35,10 @@ Los samples tienen una duración de entre 0.4 y 1.1 segundos y un tamaño de 30 
 ## Conexion
 <img src='https://svgshare.com/i/16Rz.svg' title='' />
 ## Uso Basico
-Primero, carga el sketch "firstRun" que está en la carpeta "examples" y luego ve a "Herramientas" y selecciona "ESP32 Sketch Data Upload". Esto cargará los samples en la memoria flash del ESP32. También es recomendable seleccionar la opción "NO OTA (Large APP)" en "Partition Scheme".<br/>
-Inicializa el sintetizador con initSynth(bck, ws, data), donde bck=16, ws=25 y data=22 son los pines por defecto usados en la placa ESP32 utilizados para la comunicación I2S.<br/>
+Primero, carga el sketch "firstRun" que está en la carpeta "examples" y luego ve a "Herramientas" y selecciona "ESP32 Sketch Data Upload". Esto cargará los samples en la memoria flash del ESP32. También es recomendable seleccionar la opción "NO OTA (Large APP)" en "Partition Scheme".<br>
+Inicializa el sintetizador con initSynth(bck, ws, data), donde bck=16, ws=25 y data=22 son los pines por defecto usados en la placa ESP32 utilizados para la comunicación I2S.<br>
 Carga un sample de instrumento utilizando setInstrumento(num), donde num es el índice del instrumento deseado.<br/>
-Activa notas musicales utilizando notaOn(nota, velocity, duracion). Los parámetros velocity y duracion son opcionales; si duracion es 0, la nota tiene un sostenido indefinido.<br/>
+Activa notas musicales utilizando notaOn(nota, velocity, duracion). Los parámetros velocity y duracion son opcionales; si duracion es 0, la nota tiene un sostenido indefinido.<br>
 Controla la reproducción de las notas utilizando las funciones de manejo de notas. Aplica efectos y filtros de sonido utilizando las funciones correspondientes.
 
 #### Codigo de ejemplo
@@ -69,10 +69,10 @@ Este es su Github https://github.com/turmandreams/Piano-ESP32 ahi encontraran ta
 Si te gusto este proyecto o simplemente te sientes generoso, considera invitarme una cerveza. ¡Salud! :beers:<br/>
 <a href="https://www.paypal.com/donate/?business=T8UBSMVJ2QT9Y&no_recurring=0&item_name=%C2%A1Gracias+por+tu+apoyo%21%0ATu+donaci%C3%B3n+es+de+gran+ayuda+y+es+un+incentivo+para+seguir+mejorando.&currency_code=USD"><img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/latam/mx/accept-payments-online/icons/img_btn-donate2x.png" height="80"></a><br/>
 Si has realizado una donación, por favor escribeme un correo y te enviare una version ligeramente optimizada y totalmente comentada, ademas de recibir rápidamente cualquier actualización o mejora adicional que haga a la librería. ¡Tu apoyo es invaluable!
+<br><br>
 
 
-
-### **[[SPANISH]](#english)** 
+#### **[[SPANISH]](#english)** 
 
 # ESP32 samplerSynth
 Library to create audio projects with the ESP32 board. It uses audio samples to generate musical instrument sounds and offers functions to control playback, note duration, and volume adjustment, among other features. Its main objective is to allow the maker community interested in the creation of new musical instruments to focus on the form and functionality of their creations, being able to reproduce sounds without the need for dedicated hardware, such as the VS1053b, SAM2695, Wav Trigger or SmartWav 2 modules, which They can be expensive and take up a lot of space. In addition, it focuses on ease of use, being an accessible option for beginner programmers, unlike other advanced projects such as those by Marcel Licence or Phil Schatzmann. This library facilitates quick and easy development with acceptable sound quality for most DIY projects.
