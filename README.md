@@ -88,8 +88,6 @@ Si has realizado una donación, por favor escribeme un correo y te enviare una v
 <br>
 
 **[[SPANISH]](#esp32-samplersynth)** 
-<br>
-<br>
 ## ESP32 samplerSynth
 Library to create audio projects with the ESP32 board. It uses audio samples to generate musical instrument sounds and offers functions to control playback, note duration, and volume adjustment, among other features. Its main objective is to allow the maker community interested in the creation of new musical instruments to focus on the form and functionality of their creations, being able to reproduce sounds without the need for dedicated hardware, such as the VS1053b, SAM2695, Wav Trigger or SmartWav 2 modules, which They can be expensive and take up a lot of space. In addition, it focuses on ease of use, being an accessible option for beginner programmers, unlike other advanced projects such as those by Marcel Licence or Phil Schatzmann. This library facilitates quick and easy development with acceptable sound quality for most DIY projects.
 
