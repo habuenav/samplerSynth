@@ -65,6 +65,9 @@ if(nota==72){nota=60; delay(5000);}
 Quiero expresar mi sincero agradecimiento a Turman por su contribución inicial en la función de reproducción de sonido que sirvió como punto de partida para el desarrollo de esta librería. Su código proporcionó una base sobre la cual construir y explorar nuevas funcionalidades.
 Este es su Github https://github.com/turmandreams/Piano-ESP32 ahi encontraran tambien enlaces a su canal de youtube.
 
+## Comunidad
+¡Las contribuciones son bienvenidas! Si tienes sugerencias, encuentra un error o deseas agregar una nueva característica, por favor abre un issue o envía un pull request.
+
 ## Donaciones
 Si te gusto este proyecto o simplemente te sientes generoso, considera invitarme una cerveza. ¡Salud! :beers:<br/>
 <a href="https://www.paypal.com/donate/?business=T8UBSMVJ2QT9Y&no_recurring=0&item_name=%C2%A1Gracias+por+tu+apoyo%21%0ATu+donaci%C3%B3n+es+de+gran+ayuda+y+es+un+incentivo+para+seguir+mejorando.&currency_code=USD"><img src="https://www.paypalobjects.com/digitalassets/c/website/marketing/latam/mx/accept-payments-online/icons/img_btn-donate2x.png" height="80"></a><br/>
