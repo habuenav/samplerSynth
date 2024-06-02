@@ -4,7 +4,7 @@
 Librería para crear proyectos de audio con la placa ESP32. Utiliza muestras de audio para generar sonidos de instrumentos musicales y ofrece funciones para controlar la reproducción, duración de las notas y ajuste de volumen, entre otras características. Su principal objetivo es permitir a la comunidad maker interesada en la creación de novedosos instrumentos musicales enfocarse en la forma y funcionalidad de sus creaciones, logrando reproducir sonidos sin necesidad de hardware dedicado, como los módulos VS1053b, SAM2695, Wav Trigger o SmartWav 2, que pueden ser costosos y ocupar mucho espacio. Además, se enfoca en la facilidad de uso, siendo una opción accesible para programadores principiantes, a diferencia de otros proyectos avanzados como los de Marcel Licence o Phil Schatzmann. Esta librería facilita el desarrollo rápido y sencillo con una calidad de sonido aceptable para la mayoría de proyectos DIY.
 
 ## Video demo
-[![Video](https://i9.ytimg.com/vi_webp/Dse7qjY5pPg/mq1.webp?sqp=CLD17rIG-oaymwEmCMACELQB8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGGUgWihYMA8=&rs=AOn4CLC7f4lH-msFfvj7iz1syPVrpHr3SQ)](https://youtu.be/Dse7qjY5pPg?si=KxKHlPW5pX1T3NIl)
+[![Video](https://i9.ytimg.com/vi_webp/Dse7qjY5pPg/mq1.webp?sqp=CJjC8bIG-oaymwEmCMACELQB8quKqQMa8AEB-AHUBoAC4AOKAgwIABABGGUgWihYMA8=&rs=AOn4CLBJI6rpmXIGEOepj-dsIV0ZYQA14A)](https://youtu.be/Dse7qjY5pPg?si=KxKHlPW5pX1T3NIl)
 
 ## Características
 * <b>Reproducción de Samples:</b> Soporte para la carga y reproducción de archivos WAV.
