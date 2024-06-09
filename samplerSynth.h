@@ -85,8 +85,16 @@ bool setInstrumento(byte num)
  }
 return result;
 }
+inline void notaOff(byte nota)
+{ for(byte i = 0; i <MAX_NOTES; i++) 
+    { if(notas[i].activa && notas[i].notaMidi==nota && !notas[i].iniFade) {notas[i].iniFade = true;  notasActivas--;}
+    }
+}
 inline void notaOn(byte nota,byte velocity=127,int duracion=DURATION)
-{ idxNota=0;
+{
+  if(velocity==0){notaOff(nota);}
+  else
+  {idxNota=0;
   for(byte i = 0; i <MAX_NOTES; i++) { if(!notas[i].activa){idxNota=i;  notasActivas++; break;}  }
   notas[idxNota].t_Ini=millis();
   notas[idxNota].t_Dur=duracion;
@@ -98,11 +106,7 @@ inline void notaOn(byte nota,byte velocity=127,int duracion=DURATION)
   notas[idxNota].iniFade=false;
   idxNota++;
   printLine("Nota Actual: " + String(midiToNota(nota)) + " Notas Activas: " + String(notasActivas));  
-}
-inline void notaOff(byte nota)
-{ for(byte i = 0; i <MAX_NOTES; i++) 
-    { if(notas[i].activa && notas[i].notaMidi==nota && !notas[i].iniFade) {notas[i].iniFade = true;  notasActivas--;}
-    }
+  }  
 }
 inline void alterVolNota(byte velocity)
 { idxNota=0;
