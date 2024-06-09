@@ -14,7 +14,7 @@ Librería para crear proyectos de audio con la placa ESP32. Utiliza muestras de 
 * <b>Fácil de Usar:</b> Codigo simple basado en funciones, programacion no orientada a objetos. 
 * <b>Pequeño:</b> Toda la libreria es tan solo un archivo de menos de 15kb y ocupa aproximadamente 15% de espacio de almacenamiento de programa.
  los samples incluidos tambien ocupan poco espacio aproximadamente 700Kb de los casi 4Mb de memoria flash.
-* <b>Dependencias:</b> libreria LittleFS, libreria MIDI opcional [https://github.com/FortySevenEffects/arduino_midi_library] (usada en el ejemplo rtMidiIn)
+* <b>Dependencias:</b> libreria LittleFS, libreria MIDI opcional [https://github.com/habuenav/midiRead] (usada en el ejemplo rtMidiIn)
 ### En Desarrollo
 * <b>Efectos:</b> Reverb, tremolo y delay. (cuando se usa noteOff y se estable un tiempo de delay significativo)
 * <b>Filtros:</b> Paso bajo y FIR para intentar mejorar un poco la calidad de sonido.
@@ -88,7 +88,7 @@ Library to create audio projects with the ESP32 board. It uses audio samples to 
 * <b>Easy to Use:</b> Simple function-based code, non-object-oriented programming.
 * <b>Small:</b> The entire library is just one file of less than 15kb and takes up approximately 15% of program storage space.
  The included samples also take up little space, approximately 700Kb of the almost 4Mb of flash memory.
-* <b>Dependencies:</b> LittleFS library, optional MIDI library [https://github.com/FortySevenEffects/arduino_midi_library] (used in the rtMidiIn example)
+* <b>Dependencies:</b> LittleFS library, optional MIDI library [https://github.com/habuenav/midiRead] (used in the rtMidiIn example)
 ### Developing
 * <b>Effects:</b> Reverb, tremolo and delay. (when noteOff is used and a significant delay time is set)
 * <b>Filters:</b> Low pass and FIR to try to improve the sound quality a little.
