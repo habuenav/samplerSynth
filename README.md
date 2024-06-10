@@ -92,7 +92,7 @@ Library to create audio projects with the ESP32 board. It uses audio samples to 
 ### Developing
 * <b>Effects:</b> Reverb, tremolo and delay. (when noteOff is used and a significant delay time is set)
 * <b>Filters:</b> Low pass and FIR to try to improve the sound quality a little.
-## Features
+## Functions
 * <b>initSynth(bck, ws, data):</b> Initializes the synthesizer and configures the pins for I2S communication.
 * <b>setMaxNotes(maxNotes):</b> Sets the maximum number of simultaneous notes that can be played. 8 default maximum recommended 16
 * <b>setInstrument(num):</b> Loads a specific instrument sample to be played.
