@@ -1,3 +1,6 @@
+#ifndef SAMPLERSYNTH_H
+#define SAMPLERSYNTH_H
+
 #include "soc/rtc_cntl_reg.h"
 #include <driver/i2s.h>
 #include <LittleFS.h>
@@ -207,5 +210,6 @@ void initSynth(byte bck=16, byte ws=25, byte data=22)
  }
   else { printLine("Error al Iniciar");  } 
 }
+#endif // SAMPLERSYNTH_H
 void pauseSynth(){ vTaskSuspend(synthTaskHandle);  delete[] dataSample; dataSample = new byte[0];}
 void resumeSynth(){ setInstrumento(0);  vTaskResume(synthTaskHandle); }
