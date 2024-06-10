@@ -210,6 +210,6 @@ void initSynth(byte bck=16, byte ws=25, byte data=22)
  }
   else { printLine("Error al Iniciar");  } 
 }
-#endif // SAMPLERSYNTH_H
 void pauseSynth(){ vTaskSuspend(synthTaskHandle);  delete[] dataSample; dataSample = new byte[0];}
 void resumeSynth(){ setInstrumento(0);  vTaskResume(synthTaskHandle); }
+#endif // SAMPLERSYNTH_H
