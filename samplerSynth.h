@@ -141,9 +141,8 @@ synthVolumen = vol/100.0f;
 }
 static inline void IRAM_ATTR synth_process()
 { float vel; 
- uint32_t t_act;//tiempo actual
- int32_t muestra,ii; //datos del sample, indice de posicion de la muestra
- int16_t audioBuffer[BUFFER],dato,j=0; //bufer de audio, dato de la muestra sin procesar
+ uint32_t t_act,ii;//tiempo actual, indice de posicion de la muestra
+ int16_t audioBuffer[BUFFER],muestra,dato,j=0; //bufer de audio,datos del sample, dato de la muestra sin procesar
  size_t bytesWritten;
  for(;;)
  {  muestra = 0;
@@ -181,11 +180,11 @@ void initSynth(byte bck=16, byte ws=25, byte data=22)
 {   WRITE_PERI_REG(RTC_CNTL_BROWN_OUT_REG, 0);
    delay(100);
   // Configuración del bus I2S 
-  i2sConfig.mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_TX);
+  i2sConfig.mode = (i2s_mode_t)(I2S_MODE_MASTER | I2S_MODE_TX | I2S_CHANNEL_MONO);
   i2sConfig.sample_rate = SAMPLE_RATE;
   i2sConfig.bits_per_sample = I2S_BITS_PER_SAMPLE_32BIT;
   i2sConfig.channel_format = I2S_CHANNEL_FMT_RIGHT_LEFT;
-  i2sConfig.communication_format = (i2s_comm_format_t)(I2S_COMM_FORMAT_STAND_I2S | I2S_COMM_FORMAT_STAND_I2S);
+  i2sConfig.communication_format = (i2s_comm_format_t)(I2S_COMM_FORMAT_STAND_I2S | I2S_COMM_FORMAT_I2S_MSB);
   i2sConfig.intr_alloc_flags = 0;
   i2sConfig.dma_buf_count = 8;
   i2sConfig.dma_buf_len = 64;
