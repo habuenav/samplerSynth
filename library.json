@@ -1,0 +1,23 @@
+{
+    "name": "samplerSynth",
+    "description": "samplerSynth allows developers to create audio projects using sound samples",
+    "keywords": "ESP32, Sampler, Audio, Synthesis, Instruments, Musical, Synth",
+    "authors": [
+        {
+            "name": "Holman Buenaventura",
+            "email": "habuenav@hotmail.com",
+            "url": "https://github.com/habueanv/samplerSynth",
+            "maintainer": true
+        }
+    ],
+    "repository": {
+        "type": "git",
+         "url": "https://github.com/habueanv/samplerSynth"
+    },
+    "version": "1.0.0",
+    "homepage": "https://github.com/habueanv/samplerSynth",
+    "frameworks": "Arduino",
+    "examples": [
+        "examples/*/*.ino"
+    ]
+}
