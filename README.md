@@ -35,11 +35,11 @@ Librería para crear proyectos de audio con la placa ESP32. Utiliza muestras de 
 ## Samples de Instrumentos Incluidos
 Los samples tienen una duración de entre 0.4 y 1.1 segundos y un tamaño de 30 a 65 KB, con una tasa de muestreo de 32 kHz y 16 bits. Gracias a su pequeño tamaño y a los aproximadamente 4 MB de memoria flash del ESP32, se pueden agregar muchos más samples (instrumentos). Lista de instrumentos con número y nombre: 0 Acordeón, 1 Bajo, 2 Banjo, 3 Cello, 4 Clarinete, 5 Flauta, 6 Guitarra, 7 Marimba, 8 Piano, 9 Saxofón, 10 Trompeta, 11 Ukulele, 12 Violín.
 ## Conexion
-<img src='https://svgshare.com/i/16Rz.svg' title=''/>
+<img src='https://svgshare.com/i/1750.svg' title=''/>
 
 ## Uso Basico
 Primero, carga el sketch "firstRun" que está en la carpeta "examples" y luego ve a "Herramientas" y selecciona "ESP32 Sketch Data Upload". Esto cargará los samples en la memoria flash del ESP32. También es recomendable seleccionar la opción "NO OTA (Large APP)" en "Partition Scheme".<br>
-Inicializa el sintetizador con initSynth(bck, ws, data), donde bck=16, ws=25 y data=22 son los pines por defecto usados en la placa ESP32 utilizados para la comunicación I2S.<br>
+Inicializa el sintetizador con initSynth(bck, ws, data), donde bck=17, ws=5 y data=18 son los pines por defecto usados en la placa ESP32 utilizados para la comunicación I2S.<br>
 Carga un sample de instrumento utilizando setInstrumento(num), donde num es el índice del instrumento deseado.<br/>
 Activa notas musicales utilizando notaOn(nota, velocity, duracion). Los parámetros velocity y duracion son opcionales; si duracion es 0, la nota tiene un sostenido indefinido.<br>
 Controla la reproducción de las notas utilizando las funciones de manejo de notas. Aplica efectos y filtros de sonido utilizando las funciones correspondientes.
@@ -109,11 +109,11 @@ Library to create audio projects with the ESP32 board. It uses audio samples to 
 ## Instrument Samples Included
 Samples have a duration between 0.4 and 1.1 seconds and a size of 30 to 65 KB, with a sampling rate of 32 kHz and 16 bits. Thanks to its small size and the ESP32's approximately 4 MB of flash memory, many more samples (instruments) can be added. List of instruments with number and name: 0 Accordion, 1 Bass, 2 Banjo, 3 Cello, 4 Clarinet, 5 Flute, 6 Guitar, 7 Marimba, 8 Piano, 9 Saxophone, 10 Trumpet, 11 Ukulele, 12 Violin.
 ## Connection
-<img src='https://svgshare.com/i/16Rz.svg' title='' />
+<img src='https://svgshare.com/i/1750.svg' title='' />
 
 ## Basic Use
 First, upload the "firstRun" sketch that is in the "examples" folder and then go to "Tools" and select "ESP32 Sketch Data Upload". This will load the samples into the ESP32's flash memory. It is also advisable to select the "NO OTA (Large APP)" option in "Partition Scheme".<br/>
-Initialize the synthesizer with initSynth(bck, ws, data), where bck=16, ws=25 and data=22 are the default pins used on the ESP32 board used for I2S communication.<br/>
+Initialize the synthesizer with initSynth(bck, ws, data), where bck=17, ws=5 and data=18 are the default pins used on the ESP32 board used for I2S communication.<br/>
 Load an instrument sample using setInstrument(num), where num is the index of the desired instrument.<br/>
 Activate musical notes using noteOn(note, velocity, duration). The velocity and duration parameters are optional; If duration is 0, the note has an indefinite sharp.<br/>
 Control note playback using note management functions. Apply sound effects and filters using the corresponding functions.
