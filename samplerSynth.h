@@ -3,7 +3,7 @@
 #include <driver/i2s_std.h>
 #include <LittleFS.h>
 #include <FastMapLite.h>
-#include "instrSamples.h"
+#include "progmem/instrSamples.h"
 
 #if defined(CONFIG_SPIRAM_BOOT_INIT)
 #define _SLOTS 15  // Número de sonidos en PSRAM (0-15)
