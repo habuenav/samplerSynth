@@ -9,24 +9,25 @@ Librería para crear proyectos de audio con la placa ESP32. Utiliza muestras de 
 ## Características
 * <b>Reproducción de Samples:</b> Soporte para la carga y reproducción de archivos WAV.
 * <b>Polifonia:</b> Reproduce múltiples notas simultáneamente.
+* <b>Canales:</b> permite asociar un instrumento a un canal, y reproducir notas en un determinado canal.
 * <b>Control de Volumen:</b> Volumen general y Ajuste dinámico del volumen de las notas. (Velocity)
 * <b>Salida I2S:</b> Utiliza el periférico I2S del ESP32 y un DAC externo (MAX98357). (Podria modificarse para no usar DAC externo pero baja mucho la calidad de sonido)
 * <b>Fácil de Usar:</b> Codigo simple basado en funciones, programacion no orientada a objetos. 
-* <b>Pequeño:</b> Toda la libreria es tan solo un archivo de menos de 15kb y ocupa aproximadamente 15% de espacio de almacenamiento de programa.
- los samples incluidos tambien ocupan poco espacio aproximadamente 700Kb de los casi 4Mb de memoria flash.
-* <b>Dependencias:</b> libreria LittleFS, libreria MIDI opcional [https://github.com/habuenav/midiRead] (usada en el ejemplo rtMidiIn)
+* <b>Pequeño:</b> La libreria esta compuesta por un archivo de unos 15kb, archivos .h que se almacenan samples (Instrumentos) basicos en la memoria progmem,
+ otros samples incluidos en formato wav, tambien ocupan poco espacio aproximadamente 700Kb de los casi 4Mb de memoria flash.
+* <b>Dependencias:</b> libreria LittleFS, libreria fastMapLite [https://github.com/habuenav/FastMapLite], libreria MIDI opcional [https://github.com/habuenav/midiRead] (usada en el ejemplo rtMidiIn)
 ### En Desarrollo
 * <b>Efectos:</b> Reverb, tremolo y delay. (cuando se usa noteOff y se estable un tiempo de delay significativo)
 * <b>Filtros:</b> Paso bajo y FIR para intentar mejorar un poco la calidad de sonido.
 ## Funciones
 * <b>initSynth(bck, ws, data):</b> Inicializa el sintetizador y configura los pines para la comunicación I2S.
 * <b>setMaxNotas(maxNotas):</b> Establece el número máximo de notas simultáneas que pueden reproducirse. 8 por defecto maximo recomendado 16
-* <b>setInstrumento(num):</b> Carga un sample de instrumento específico para ser reproducido.
+* <b>setInstrumento(nroCanal,nroInstr):</b> Carga el sample,en un determinado canal para ser reproducido.
 * <b>setVolumen(vol):</b> Ajusta el volumen global del sintetizador de (0-100)
 * <b>setSustainNota(DuracionNota):</b> configura el tiempo en milisegundos por defecto que dura una nota al llamar la funcion noteOn (0-65535) si es 0 suena indefinidamente.
 * <b>setDelayNota(dFade):</b> Configura el tiempo de desvanecido usado en notaOff para silenciar la nota activa (0-127) 0 inmediato 127 duración maxima.
-* <b>notaOn(nota, velocity, duracion):</b> Activa una nota musical con la frecuencia correspondiente, volumen y duración especificados.
-* <b>notaOff(nota):</b> Desactiva una nota musical gradualmente, disminuyendo su volumen durante un tiempo determinado antes de silenciarla por completo.
+* <b>notaOn(canal,nota, velocity, duracion):</b> Activa una nota musical en el canal indicado con la frecuencia correspondiente, volumen y duración especificados.
+* <b>notaOff(canal,nota):</b> Desactiva una nota musical gradualmente, disminuyendo su volumen durante un tiempo determinado antes de silenciarla por completo.
 * <b>allnotaOff():</b> Desactiva todas las notas musicales actualmente activas.
 * <b>alterVolNota(velocity):</b> Ajusta el volumen de una nota inclusive si esta activa.
 * <b>alterPitchNota(cant):</b> Ajusta el tono de una nota inclusive si esta activa.
@@ -52,11 +53,11 @@ void setup() {
   Serial.begin(115200);
   initSynth();
   setVolumen(3);
-  setInstrumento(6);
+  setInstrumento(0,6);
 }
 byte nota=60;
 void loop() {
-notaOn(nota);
+notaOn(0,nota);
 delay(500);
 nota++;
 if(nota==72){nota=60; delay(5000);}   
@@ -126,11 +127,11 @@ void setup() {
   Serial.begin(115200);
   initSynth();
   setVolumen(3);
-  setInstrumento(6);
+  setInstrumento(0,6);
 }
 byte nota=60;
 void loop() {
-notaOn(nota);
+notaOn(0,nota);
 delay(500);
 nota++;
 if(nota==72){nota=60; delay(5000);}   
