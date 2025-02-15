@@ -1,0 +1,6 @@
+#include "acordeon.h"
+#include "celesta.h"
+#include "guitarra.h"
+#include "piano.h"
+#include "saxofon.h"
+#include "trompeta.h"
